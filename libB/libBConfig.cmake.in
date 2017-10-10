@@ -1,0 +1,5 @@
+set(libB_VERSION 1.0.0)
+
+@PACKAGE_INIT@
+set_and_check(libB_INCLUDE_DIR "@PACKAGE_INCLUDE_INSTALL_DIR@")
+set_and_check(libB_LIBRARIES "@PACKAGE_LIB_INSTALL_DIR@/liblibB.so")

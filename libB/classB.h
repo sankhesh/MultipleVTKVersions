@@ -12,6 +12,7 @@ public:
   classB();
   ~classB();
 
+  void SetFilter(vtkWindowToImageFilter* w);
   vtkNew<vtkWindowToImageFilter> w;
 };
 }

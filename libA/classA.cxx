@@ -8,3 +8,12 @@ A::classA::classA()
 A::classA::~classA()
 {
 }
+
+void A::classA::SetFilter(vtkWindowToImageFilter* wi)
+{
+  if (!wi)
+  {
+    return;
+  }
+  wi->SetMagnification(3.0);
+}

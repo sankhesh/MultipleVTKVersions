@@ -29,8 +29,8 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_BINARY_DIR})
 
-add_executable(${PROJECT_NAME}Exe classAExe.cxx)
-target_link_libraries(${PROJECT_NAME}Exe
+add_executable(commonExe common.cxx)
+target_link_libraries(CommonExe
   ${PROJECT_NAME}
   ${libB_LIBRARIES})
 
@@ -42,7 +42,7 @@ foreach(P INCLUDE LIB BIN CMAKE)
   endif()
 endforeach()
 
-install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}Exe
+install(TARGETS ${PROJECT_NAME} commonExe
   EXPORT ${PROJECT_NAME}Targets
   RUNTIME DESTINATION "${BIN_INSTALL_DIR}" COMPONENT bin
   LIBRARY DESTINATION "${LIB_INSTALL_DIR}" COMPONENT shlib

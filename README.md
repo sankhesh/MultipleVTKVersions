@@ -24,7 +24,7 @@ linkage.
               \                           /
                \                         /
                 \+---------------------+/
-                 |      libAExe        |
+                 |      commonExe      |
                  +---------------------+
 ```
 
@@ -32,7 +32,7 @@ The setup is described in the figure above.
 
 - lib A links to VTK v8.1
 - lib B links to VTK v6.2
-- libAExe links to both libA and libB
+- commonExe links to both libA and libB
 
 For the sake of differentiating, `vtkWindowToImageFilter::SetMagnification()` is
 chosen as the test. The method was deprecated in v8.0 and leads to a warning
@@ -41,7 +41,7 @@ to v8.0, it would not complain.
 
 ## Tests and results
 
-libAExe tests the following (the results are noted in ***BOLD TEXT***:
+commonExe tests the following (the results are noted in ***BOLD TEXT***:
 
 - Instantiate libB::classB; which calls
 `v6.2::vtkWindowToImageFilter::SetMagnification()`. ***NO WARNING***
